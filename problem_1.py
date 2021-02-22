@@ -11,6 +11,8 @@ def sqrt(number):
         return 0
     if number == 1:
         return 1
+    if number < 0:
+        return None
     # the other conditions
     return sqrt_small(0, number, number)
 
@@ -37,3 +39,4 @@ print ("Pass" if  (0 == sqrt(0)) else "Fail")
 print ("Pass" if  (4 == sqrt(16)) else "Fail")
 print ("Pass" if  (1 == sqrt(1)) else "Fail")
 print ("Pass" if  (5 == sqrt(27)) else "Fail")
+print ("Pass" if  (None == sqrt(-1)) else "Fail")

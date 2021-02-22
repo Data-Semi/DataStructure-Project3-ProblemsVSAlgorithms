@@ -8,12 +8,14 @@ def rotated_array_search(start_i, input_list, number):
        int: Index or -1
     """
     length = len(input_list)
+    if length == 0:
+        return -1
+
     mid_i = length//2
     mid_e = input_list[mid_i]
     
     #base condition
-    if length == 0:
-        return -1
+
     if length == 1:
         if number == mid_e:
             return start_i + mid_i
@@ -102,3 +104,6 @@ test_function([[6, 7, 8, 1, 2, 3, 4], 8])
 test_function([[6, 7, 8, 1, 2, 3, 4], 1])
 test_function([[6, 7, 8, 1, 2, 3, 4], 3])
 test_function([[6, 7, 8, 1, 2, 3, 4], 10])
+test_function([[], 10])
+test_function([[1], 10])
+test_function([[10], 10])
